@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+
+if [ $# -eq 0 ]
+  then
+    echo "Pass in GitHub release tag string"
+else
+    goreleaser release --snapshot --rm-dist
+    gh release create $1 --generate-notes -t $1 ./dist/*.tar.gz
+fi

@@ -1,2 +1,2 @@
 # cobra-cli-template
-Template repo for working with cobra based CLI
+Template repo to build cobra based CLIs
